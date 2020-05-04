@@ -1,0 +1,42 @@
+name:                syntax-of-lambda-calculus
+version:             0.1.0.0
+github:              "githubuser/syntax-of-lambda-calculus"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2020 Author name here"
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  syntax-of-lambda-calculus-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - syntax-of-lambda-calculus
+
+tests:
+  syntax-of-lambda-calculus-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - syntax-of-lambda-calculus
+    - tasty-hunit
+    - tasty
